@@ -1,0 +1,29 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <h1>Rubriques</h1>
+    
+    <p><a href="{{ path('admin_category_edit') }}">ajouter une rubrique</a></p>
+    
+    <table class="table">
+        <tr>
+            <th>id</th>
+            <th>Nom</th>
+            <th>Edition</th>
+        </tr>
+        {% for category in categories %}
+            <tr>
+                <td>{{ category.id }}</td>
+                <td>{{ category.name }}</td>
+                <td>
+                    <a href="{{path('admin_category_edit', {id: category.id}) }}" class="btn btn-primary">modifier</a>
+                    <a href="{{path('admin_category_delete', {id: category.id}) }}" class="btn btn-danger">supprimer</a>
+                </td>
+            </tr>
+         {% else %}
+             <tr><td colspan="2" style="text-align: center">Aucun résultat</td></tr>
+        {% endfor %}    
+    </table>
+{% endblock %}
+
+

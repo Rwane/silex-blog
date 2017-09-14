@@ -1,0 +1,14 @@
+.containeur{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 10px;
+  
+    border-radius: 1%;
+}
+
+.article{
+    padding: 10px;
+    background: #F8F8F8;
+    border-radius: 10%
+}
+

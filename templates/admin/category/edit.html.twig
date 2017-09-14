@@ -1,0 +1,36 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <h1>{% if category.id %}Modification{% else %}Création{% endif %} rubriques</h1>
+    <form class="form-horizontal" method="post">
+        <fieldset>
+
+<!-- Form Name -->
+    <legend>EDIT category</legend>
+
+<!-- Text input-->
+    <div class="form-group">
+     <label class="col-md-4 control-label" for="nom">Nom</label>  
+  <div class="col-md-4">
+  <input id="nom" name="name" type="text" placeholder="" value="{{category.name}}" class="form-control input-md">
+    
+  </div>
+</div>
+
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton">[-_-]</label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" type="submit" class="btn btn-primary">Enregistrer</button>
+    <a href="{{path('admin_categories')}}" class="btn btn-default">Annuler</a>
+  </div>
+</div>
+
+</fieldset>
+</form>
+{% endblock %}
+
+   
+

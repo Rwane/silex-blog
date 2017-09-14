@@ -1,0 +1,16 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    
+    <h1>Accueil</h1>
+  
+        {% include 'article_list.html.twig' %}
+    
+{% endblock %}
+
+    {% block javascript %}  
+        {{ parent() }}{#reprend le contenu du bloc javascript du layout#}
+        <script>
+            console.log('surcharge du JS');
+        </script>
+    {% endblock %}

@@ -1,0 +1,14 @@
+ <div class="containeur">
+   {% for article in articles %}
+       
+           <div class ="article">
+                <h2>{{  article.title }} <small>{{ article.categoryName }}</small></h2>
+                <p><strong>{{ article.header|nl2br}}</strong></p>
+                <p><em>{{ article.authorName }}</em></p>
+            </div>
+      
+     {% else %}
+       </div>
+             <tr><td colspan="2" style="text-align: center">Aucun résultat</td></tr>
+    {% endfor %}   
+   

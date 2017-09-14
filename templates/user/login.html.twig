@@ -1,0 +1,22 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <h1>connexion</h1>
+    
+    <form method="post">
+   
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" name="email" {#value="{{ user.email }}"#} class="form-control">
+        </div>
+        <div class="form-group">
+            <label >mot de passe</label>
+            <input type="password" name="password" {#value="{{ user.password }}"#} class="form-control">
+        </div>
+     
+        <button type="submit" class="btn btn-primary">Se connecter</button>
+    </form>
+    
+{% endblock %}
+
+    
